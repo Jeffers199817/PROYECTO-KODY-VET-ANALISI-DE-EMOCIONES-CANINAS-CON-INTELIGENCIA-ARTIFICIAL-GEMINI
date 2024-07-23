@@ -1,0 +1,1 @@
+{"version":3,"sources":["paginas/_auth.scss"],"names":[],"mappings":"AAIA;EACE","file":"index.css","sourcesContent":["\n.auth{\n\n}\n.auth__texto{\n  font-size: 2rem;\n}\n    "]}
