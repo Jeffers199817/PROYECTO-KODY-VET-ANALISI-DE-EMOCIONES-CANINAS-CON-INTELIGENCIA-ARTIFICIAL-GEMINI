@@ -2,9 +2,9 @@
 
 namespace Controllers;
 
-use MVC\Router;
 use Classes\Email;
 use Model\Usuario;
+use MVC\Router;
 
 class AuthController {
     public static function login(Router $router) {
@@ -248,7 +248,7 @@ class AuthController {
             Usuario::setAlerta('exito', 'Cuenta Comprobada éxitosamente');
         }
 
-        debuguear($usuario);
+   
 
         $router->render('auth/confirmar', [
             'titulo' => 'Confirma tu cuenta Kody-Vet',
