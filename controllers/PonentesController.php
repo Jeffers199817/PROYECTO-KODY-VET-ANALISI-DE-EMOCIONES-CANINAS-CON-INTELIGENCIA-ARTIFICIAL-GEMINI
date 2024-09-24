@@ -192,6 +192,8 @@ class PonentesController
 
     public static function eliminar(Router $router)
     {
+
+        
         // condición para no entrar a enlaces si no eres admin
         if (!is_admin()) {
             header('Location: /login');
@@ -203,14 +205,18 @@ class PonentesController
                 header('Location: /login');
             }
 
+           
+
             $id = $_POST['id'];
             $ponente = Ponente::find($id);
             if (!isset($ponente)) {
                 header('location: /admin/ponentes');
             }
-
+           
+                       
+       
             $resultado = $ponente->eliminar();
-
+            
             if ($resultado) {
                 header('location: /admin/ponentes');
             }
